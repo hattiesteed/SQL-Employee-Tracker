@@ -5,7 +5,7 @@ INSERT INTO DEPARTMENT (NAME) VALUES
 (`Engineering`),
 (`Finance`),
 (`Legal`);
--- INSETS DATA FOR REQUIRED FILEDS INTO ROLE TABLE
+-- INSERTS DATA FOR REQUIRED FILEDS INTO ROLE TABLE
 INSERT INTO ROLE(TITLE, SALARY, DEPARTMENT_ID) VALUES
 (`Sales Lead`, 1000000.00, 1),
 (`Salesperson`, 800000.00, 1),
@@ -22,4 +22,4 @@ INSERT INTO EMPLOYEE (FIRST_NAME, LAST_NAME, ROLE_ID, MANAGER_ID) VALUES
 (`Liz`, `Cox`, 5, 6),
 (`Samantha`, `Hudgens`, 7, 6),
 (`Tim`, `Hanks`, 6, NULL),
-(`Adrian`, `Ruiz`, 3, NULL),
+(`Adrian`, `Ruiz`, 3, NULL);
