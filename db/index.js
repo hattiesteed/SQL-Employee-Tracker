@@ -11,7 +11,7 @@ class DB {
     }
     viewAllRoles() {
         return this.connection.promise().query(
-            'SELECT * FROM ROLES'
+            'SELECT * FROM ROLE'
         );
     }
     viewAllEmployee() {
@@ -31,7 +31,7 @@ class DB {
     }
     addEmployee(EMPLOYEE) {
         return this.connection.promise().query(
-            'INSET INTO EMPLOYEE SET ?', EMPLOYEE
+            'INSERT INTO EMPLOYEE SET ?', EMPLOYEE
         );
     }
     updateEmployeeRole(EMPLOYEEid, roleID) {

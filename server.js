@@ -92,7 +92,7 @@ function questions() {
                 // if choice is exit then exit the application
                 case 'exit':
                     console.log('Bye.');
-                    conncection.end();
+                    connection.end();
                     break;
             }
         })
@@ -139,8 +139,8 @@ function addRole() {
     ])
     .then((res) => {
         let role = res;
-        db.addRole(ROLE).then(() => {
-            console.table(ROLE);
+        db.addRole(role).then(() => {
+            console.table(role);
             questions();
         });
     })
@@ -171,8 +171,8 @@ function addEmployee () {
     ])
         .then((res) => {
             let employee = res;
-            db.addEmployee(EMPLOYEE).then(() => {
-                console.table(EMPLOYEE);
+            db.addEmployee(employee).then(() => {
+                console.table(employee);
                 questions();
             });
         })
@@ -193,8 +193,8 @@ function updateEmployeeRole() {
     ])
     .then((res) => {
         let employee = res;
-        db.updateEmployeeRole(EMPLOYEE.ID,EMPLOYEE.ROLE_ID).then (() => {
-            console.table(EMPLOYEE);
+        db.updateEmployeeRole(employee.ID,employee.role_ID).then (() => {
+            console.table(employee);
             questions();
         });
     })
