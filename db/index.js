@@ -2,19 +2,19 @@ const MySqlconnection = require('../connection');
 
 class DB {
     constructor() {
-        this.connection = MySqlconnection;
+    this.connection = MySqlconnection;
     }
     viewAllDepartments() {
-        return this.connection.promise().query(
-            'SELECT * FROM DEPARTMENT'
-        );
+    return this.connection.promise().query(
+        'SELECT * FROM DEPARTMENT'
+    );
     }
     viewAllRoles() {
-        return this.connection.promise().query(
-            'SELECT * FROM ROLE'
-        );
+    return this.connection.promise().query(
+        'SELECT * FROM ROLE'
+    );
     }
-    viewAllEmployee() {
+    viewAllEmployees() {
         return this.connection.promise().query(
             'SELECT * FROM EMPLOYEE'
         );
@@ -41,7 +41,7 @@ class DB {
     }
     // ends the connection
     endConnection() {
-        this.connection.end();
+    this.connection.end();
     }
 }
 module.exports = new DB();
